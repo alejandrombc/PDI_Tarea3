@@ -13,7 +13,7 @@ Una vez ejecutada se presentara una interfaz de usuario con la que podra interac
 
 Todas las acciones son acumulativas, es decir, si usted aplica brillo y luego contraste el contraste se le aplicara a la imagen con brillo, esto aplica en todas las acciones del programa. En caso de querer volver a la imagen original simplemente debe presionar el boton de "Original". 
 
-Los filtros se aplican segun la lista de matrices, es decir, seleccionando un filtro Box con la opcion 3x3 se realizara dicho filtro con su matriz de convolucion 3x3, asi para todos. Ademas puede crear su propio filtro con la opcion "Personalizado" y se abrira una ventana con una matriz segun la cantidad escogida.
+Los filtros se aplican segun la lista de matrices, es decir, seleccionando un filtro Box con la opcion 3x3 se realizara dicho filtro con su matriz de convolucion 3x3, asi para todos. Ademas puede crear su propio filtro con la opcion "Personalizado" y se abrira una ventana con una matriz segun la cantidad escogida. 
 
 El programa acepta imagenes con formato .bmp (1,4,8,16,24 bits) y de otros formatos como .jpg y .png.
 
