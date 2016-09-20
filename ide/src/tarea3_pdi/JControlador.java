@@ -888,10 +888,11 @@ class JControlador {
        int width = actual.getWidth();
        if(Tipo_imagen == 0) Tipo_imagen = 1;
        if(height > tam && width > tam){
-       BufferedImage picture_2;
+       BufferedImage picture_2, picture_auxiliar;
        
        picture_2 = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-       
+       picture_auxiliar = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+       picture_auxiliar = greyscale();
         for(int x = 0; x < width; x++)
             for(int y = 0; y < height; y++)
             {
@@ -902,7 +903,7 @@ class JControlador {
                     {
                         int imageX = ((x - tam / 2 + filterX + width) % width);
                         int imageY = ((y - tam / 2 + filterY + height) % height);
-                        Color c = new Color(actual.getRGB(imageX, imageY),true);
+                        Color c = new Color(picture_auxiliar.getRGB(imageX, imageY),true);
 
                         red_1 += c.getRed() * matriz_1[filterX][filterY];
                         green_1 += c.getGreen() * matriz_1[filterX][filterY];
@@ -949,7 +950,7 @@ class JControlador {
               
             factor++;
         }
-        actual = greyscale();
+        
         aplicacion_bordes(tam, matriz_1, matriz_2);
     }
     
@@ -986,7 +987,7 @@ class JControlador {
                                 factor--;
             }
         }
-        actual = greyscale(); 
+ 
         aplicacion_bordes(tam, matriz_1, matriz_2);
     }
 
